@@ -1,10 +1,16 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text>Hello World</Text>
+    <SafeAreaView
+      style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <Text>GAMEON</Text>
+      <TouchableOpacity>
+        <Text>Let's begin</Text>
+        <MaterialIcons name="arrow-back" size={22}/>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
