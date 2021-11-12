@@ -8,7 +8,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>GAMEON</Text>
-      <LogoSvg size={33} />
+      <LogoSvg {...styles.logo} />
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Let's begin</Text>
         <MaterialIcons name="arrow-forward-ios" size={22} color="#fff" />
@@ -18,7 +18,12 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 50,
+  },
   title: {
     fontSize: 30,
     fontWeight: 'bold',
@@ -39,6 +44,11 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 18,
     fontFamily: 'Roboto-MediumItalic',
+  },
+  logo: {
+    height: 300,
+    width: 300,
+    transform: [{rotate: '-15deg'}],
   },
 });
 
